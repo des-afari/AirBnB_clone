@@ -5,13 +5,12 @@ BaseModel class that defines all common attributes/methods for other classes
 import uuid
 from datetime import datetime
 import models
-import json
 isoform_time = "%Y-%m-%dT%H:%M:%S.%f"
 
 
 class BaseModel:
     """
-        Summary: Definning the base class
+        Summary: Defining the base class
         from which the other classes will inherit
         Attributes:
             id -> Public instance attributes
