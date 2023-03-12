@@ -22,7 +22,7 @@ class BaseModel:
 
     def to_dict(self):
         """Returns a dictionary containing all items of __dict__"""
-        base_model_dict = self.__dict__
+        base_model_dict = self.__dict__.copy()
 
         base_model_dict['__class__'] = self.__class__.__name__
         base_model_dict['created_at'] = self.created_at.isoformat()
