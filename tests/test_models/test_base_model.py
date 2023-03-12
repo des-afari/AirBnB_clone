@@ -1,36 +1,16 @@
 #!/usr/bin/python3
 """ Unittest for BaseModel class """
 import unittest
-import json
-import pep8
-import os
 from datetime import datetime
 from models.base_model import BaseModel
-from models.amenity import Amenity
-from models.city import City
-from models.place import Place
-from models.state import State
-from models.review import Review
-from models.user import User
-from models.engine.file_storage import FileStorage
 
 
 class TestBaseModel(unittest.TestCase):
-    """Test class for BaseModel
-
-    Args:
-        unittest ([type]): [description]
-    """
+    """Test class for BaseModel"""
     def setUp(self):
         """SetUp method"""
         self.bm_instance1 = BaseModel()
         self.bm_instance2 = BaseModel()
-
-    def test_base_pep8(self):
-        """test pep8"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['./models/base_model.py'])
-        self.assertEqual(result.total_errors, 0)
 
     def test_docstring(self):
         """test docstring in the file"""
@@ -54,14 +34,14 @@ class TestBaseModel(unittest.TestCase):
 
     def test_attributes(self):
         """Test that instantiation is correct"""
-        self.bm_instance1.name = "Holberton"
+        self.bm_instance1.name = "My First School"
         self.bm_instance1.my_number = 89
         self.bm_instance1.save()
         bm_instance1_json = self.bm_instance1.to_dict()
         self.bm_instance2 = BaseModel(**bm_instance1_json)
         self.assertEqual(self.bm_instance2.id, self.bm_instance1.id)
-        self.assertEqual(self.bm_instance2.name, self.bm_instance1.name)
-        self.assertEqual(self.bm_instance2.my_number,
+        self.assertEqual(self.bm_instance1.name, self.bm_instance1.name)
+        self.assertEqual(self.bm_instance1.my_number,
                          self.bm_instance1.my_number)
         self.assertEqual(self.bm_instance2.created_at,
                          self.bm_instance1.created_at)

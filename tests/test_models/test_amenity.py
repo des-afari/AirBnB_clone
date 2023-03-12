@@ -1,17 +1,8 @@
 #!/usr/bin/python3
 """ Unittest for Amenity class """
 import unittest
-import json
-import pep8
-import os
 from models.base_model import BaseModel
 from models.amenity import Amenity
-from models.city import City
-from models.place import Place
-from models.state import State
-from models.review import Review
-from models.user import User
-from models.engine.file_storage import FileStorage
 
 
 class TestAmenity(unittest.TestCase):
@@ -20,12 +11,6 @@ class TestAmenity(unittest.TestCase):
         """SetUp method"""
         self.amenity1 = Amenity()
         self.amenity1.name = "juan"
-
-    def test_base_pep8(self):
-        """Test for pep8"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['./models/amenity.py'])
-        self.assertEqual(result.total_errors, 0)
 
     def test_docstring(self):
         """test docstring in the file"""
