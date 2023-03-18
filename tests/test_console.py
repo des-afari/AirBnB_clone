@@ -5,6 +5,11 @@ from console import HBNBCommand
 
 class TestHBNBCommand(unittest.TestCase):
 
+<<<<<<< HEAD
+=======
+class TestHBNBCommand(unittest.TestCase):
+    """Console Tests"""
+>>>>>>> 104b64726d0190383d34774f6f421b26b516025f
     def setUp(self):
         """Reset the file storage"""
         self.cli = HBNBCommand()
