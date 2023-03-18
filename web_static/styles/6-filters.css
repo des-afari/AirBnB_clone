@@ -1,4 +1,5 @@
 .filters{
+	z-index: 1;
 	position: relative;
 	background: #FFF;
 	height: 70px;
