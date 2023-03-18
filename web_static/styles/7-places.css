@@ -1,0 +1,33 @@
+.places >  h1{
+	font-size: 30px;
+}
+
+.place_container{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+}
+
+.places > .place_container > article{
+	width: 390px;
+	padding: 20px;
+	margin: 20px;
+	border: 1px solid #FF5A5F;
+}
+
+.places > .place_container > article > h2{
+	font-size: 30px;
+	text-align: center;
+}
+
+.place_container > article:nth-child(odd) {
+  grid-column: 1;
+}
+
+.place_container > article:nth-child(even) {
+  grid-column: 2;
+}
+
+.place_container > article:nth-last-child(1):nth-child(odd) {
+  grid-column: 1 / 3;
+}
