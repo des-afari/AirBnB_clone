@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-""" 0x00. AirBnB clone - The console """
 import cmd
 import re
 

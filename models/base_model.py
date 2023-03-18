@@ -1,26 +1,12 @@
 #!/usr/bin/python3
-""" 0x00. AirBnB clone - The console """
 from . import storage
 from datetime import datetime
 import uuid
 
 
 class BaseModel():
-    """Defines all common attributes/methods for `BaseModel` and its subclasses.
-
-    Use of kwargs is currently very brittle and assumes no use of *args,
-    and either empty **kwargs, or a dictionary that contains a key for every
-    instance attrtibute named in `__init__`, and corresponding values of the
-    correct type and formatting.
-
-    Attributes:
-        id (str): a unique UUID that is assigned when an instance is created
-        created_at (datetime.datetime): the current datetime when an instance
-            is created
-        updated_at (datetime.datetime): the current datetime when an instance
-            is created, but updated everytime object is changed
-
-    """
+    """Defines all common attributes/methods for \
+            `BaseModel` and its subclasses."""
     def __init__(self, *args, **kwargs):
         """`BaseModel` class constructor.
 
