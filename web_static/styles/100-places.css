@@ -93,3 +93,58 @@
 .user{
 	margin: 20px 0;
 }
+
+.places_amenities, .reviews{
+	margin-top: 40px;
+}
+
+.places_amenities > h2, .reviews > h2{
+	font-size: 16px;
+	border-bottom: 1px solid #DDD;
+}
+
+.places_amenities > ul, .places_amenities li, .reviews > ul, .reviews li{
+	list-style: none;
+	padding: 0;
+}
+
+.places_amenities > ul > li{
+	width: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pet_friendly{
+	background-image: url("../images/icon_pets.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 40px;
+}
+
+.TV{
+	background-image: url("../images/icon_tv.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 40px;
+}
+
+.wifi{
+	background-image: url("../images/icon_wifi.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 40px;
+}
+
+.reviews > ul > li > h3{
+	font-size: 14px;
+}
+
+.reviews > ul > li > p{
+	font-size: 12px;
+}
+
